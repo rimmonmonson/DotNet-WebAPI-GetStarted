@@ -19,6 +19,7 @@ namespace GetStartAPI
         {
             services.AddControllers();
             services.AddSwagger();
+            services.AddHealthChecks();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -36,10 +37,8 @@ namespace GetStartAPI
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
-                endpoints.MapGet("/", async context =>
-                {
-                    await context.Response.WriteAsync("Hello World!");
-                });
+                //Reference: https://docs.microsoft.com/en-us/aspnet/core/host-and-deploy/health-checks?view=aspnetcore-5.0
+                endpoints.MapHealthChecks(Constants.Health.EndPoint); 
             });
         }
     }

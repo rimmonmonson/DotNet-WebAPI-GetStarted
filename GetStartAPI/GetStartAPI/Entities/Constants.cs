@@ -13,5 +13,9 @@ namespace GetStartAPI
             public static string ApiName => "GetStartAPI";
             public static string Version => "v1";
         }
+        public static class Health
+        {
+            public static string EndPoint => "/health";
+        }
     }
 }

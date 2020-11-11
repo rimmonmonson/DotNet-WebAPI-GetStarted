@@ -15,7 +15,7 @@ namespace GetStartAPI
         /// Add Swagger middleware
         /// </summary>
         /// <remarks>
-        /// See: https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-5.0&tabs=visual-studio
+        /// Reference: https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-5.0&tabs=visual-studio
         /// </remarks>
         public static IServiceCollection AddSwagger(this IServiceCollection services)
         {
